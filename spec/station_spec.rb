@@ -1,11 +1,13 @@
 require 'station'
 
 describe Station do
+  subject {Station.new('Shoreditch', 2)}
 
-  let(:station) { double :station }
-  describe '#initalize' do
-    it 'should create a name' do
-      expect
-    end
+  it 'knows its name' do
+    expect(subject.name).to eq('Shoreditch')
+  end
+
+  it 'knows its zone' do
+    expect(subject.zone).to eq(2)
   end
 end
